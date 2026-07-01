@@ -68,7 +68,8 @@ LANGUAGES = [
 
 with gr.Blocks(
     title="SonicScript - AI Text-to-Speech",
-    css=custom_css  # ✅ Fixed: Styling is handled safely inside the UI compiler now
+    css=custom_css  
+    
 ) as demo:
 
     # ------------------------------------------------------
@@ -211,7 +212,7 @@ with gr.Blocks(
     gr.HTML(
         """
         <div class="footer">
-            ❤️ Made with Python • Gradio • Google Text-to-Speech (gTTS)
+            Made with Python • Gradio • Google Text-to-Speech (gTTS)
         </div>
         """
     )
@@ -290,4 +291,4 @@ with gr.Blocks(
 # Launch App
 # ==========================================================
 if __name__ == "__main__":
-    demo.launch()  # ✅ Fixed: Kept parameter-free for complete cross-version stability
+    demo.launch()  
