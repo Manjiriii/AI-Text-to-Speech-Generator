@@ -1,166 +1,175 @@
 custom_css = """
-/* Background */
-.gradio-container {
-    background: #F8F5FF;
-    font-family: 'Segoe UI', sans-serif;
+/* ==========================================================================
+   Gradio 6 Theme & Background Overrides
+   ========================================================================== */
+/* Targets the absolute root background wrapper to enforce light lavender */
+.gradio-container, 
+.gradio-container-6-19-0,
+div[data-testid="trigger-button"] {
+    background: #F8F5FF !important;
+    background-color: #F8F5FF !important;
+    font-family: 'Segoe UI', system-ui, -apple-system, sans-serif !important;
 }
 
-/* Hero Section */
+/* ==========================================================================
+   Hero Header Section
+   ========================================================================== */
 .hero {
-    background: linear-gradient(135deg, #7C3AED, #A855F7, #EC4899);
-    color: white;
-    border-radius: 22px;
-    padding: 35px;
-    text-align: center;
-    margin-bottom: 20px;
-    box-shadow: 0 10px 25px rgba(0,0,0,.15);
+    background: linear-gradient(135deg, #7C3AED, #A855F7, #EC4899) !important;
+    color: white !important;
+    border-radius: 22px !important;
+    padding: 35px !important;
+    text-align: center !important;
+    margin-bottom: 20px !important;
+    box-shadow: 0 10px 25px rgba(124, 58, 237, 0.25) !important;
 }
 
 .hero h1 {
-    font-size: 38px;
-    margin-bottom: 8px;
+    font-size: 38px !important;
+    margin-bottom: 8px !important;
+    color: white !important;
 }
 
 .hero p {
-    font-size: 18px;
-    opacity: .95;
+    font-size: 18px !important;
+    opacity: .95 !important;
+    color: #F3E8FF !important;
 }
 
-/* Cards & Layout Panels */
-.card {
-    background: white;
-    border-radius: 20px;
-    padding: 25px;
-    box-shadow: 0 5px 18px rgba(0,0,0,.08);
+/* ==========================================================================
+   Cards & Layout Panels (Forces Gradio blocks to behave like your design)
+   ========================================================================== */
+.card, .side-card, .languages, .gradio-block, .type-row {
+    background: white !important;
+    background-color: white !important;
+    border-radius: 20px !important;
+    padding: 25px !important;
+    box-shadow: 0 5px 18px rgba(124, 58, 237, 0.06) !important;
+    border: none !important;
 }
 
-.side-card {
-    background: white;
-    border-radius: 20px;
-    padding: 20px;
-    box-shadow: 0 8px 20px rgba(0,0,0,.08);
+.side-panel h2, .languages h3 {
+    color: #7C3AED !important;
+    margin-bottom: 15px !important;
+    font-weight: 700 !important;
 }
 
-.side-panel h2 {
-    color: #7C3AED;
-    margin-bottom: 15px;
-}
-
-.languages {
-    background: white;
-    border-radius: 20px;
-    padding: 20px;
-    margin-top: 20px;
-    box-shadow: 0 5px 18px rgba(0,0,0,.08);
-}
-
-.languages h3 {
-    color: #7C3AED;
-    margin-bottom: 15px;
-}
-
-/* Buttons */
-button {
+/* ==========================================================================
+   Interactive Buttons
+   ========================================================================== */
+button, .gr-button {
     border-radius: 12px !important;
-    transition: .3s;
+    transition: all 0.3s ease !important;
 }
 
-button:hover {
-    transform: translateY(-2px);
+button:hover, .gr-button:hover {
+    transform: translateY(-2px) !important;
+    box-shadow: 0 5px 15px rgba(124, 58, 237, 0.2) !important;
 }
 
-/* Chips & Lists */
+/* ==========================================================================
+   Custom Chips & Lists (Fixes the faded language button glitch)
+   ========================================================================== */
 .chip-container {
-    display: flex;
-    flex-wrap: wrap;
-    gap: 12px;
-    justify-content: center;
+    display: flex !important;
+    flex-wrap: wrap !important;
+    gap: 12px !important;
+    justify-content: center !important;
 }
 
+/* Forces the chips to display with full visibility and your custom branding colors */
 .chip {
-    display: inline-flex;
-    align-items: center;
-    gap: 8px;
-    background: #F3E8FF;
-    color: #6D28D9;
-    padding: 10px 18px;
-    border-radius: 25px;
-    font-weight: 600;
-    font-size: 15px;
-    border: 1px solid #D8B4FE;
-    transition: all 0.3s ease;
-    cursor: default;
+    display: inline-flex !important;
+    align-items: center !important;
+    gap: 8px !important;
+    background: #F3E8FF !important;
+    background-color: #F3E8FF !important;
+    color: #6D28D9 !important;
+    padding: 10px 18px !important;
+    border-radius: 25px !important;
+    font-weight: 600 !important;
+    font-size: 15px !important;
+    border: 1px solid #D8B4FE !important;
+    opacity: 1 !important; /* Overrides Gradio 6 faded state */
+    visibility: visible !important;
+    transition: all 0.3s ease !important;
+    cursor: default !important;
 }
 
 .chip:hover {
-    background: linear-gradient(135deg, #7C3AED, #EC4899);
-    color: white;
-    transform: translateY(-3px) scale(1.03);
-    box-shadow: 0 8px 20px rgba(124, 58, 237, 0.3);
+    background: linear-gradient(135deg, #7C3AED, #EC4899) !important;
+    color: white !important;
+    transform: translateY(-3px) scale(1.03) !important;
+    box-shadow: 0 8px 20px rgba(124, 58, 237, 0.3) !important;
+    border-color: transparent !important;
 }
 
 .feature-list {
-    list-style: none;
-    padding: 0;
+    list-style: none !important;
+    padding: 0 !important;
 }
 
 .feature-list li {
-    background: #F3E8FF;
-    margin: 10px 0;
-    padding: 12px;
-    border-radius: 12px;
-    color: #4C1D95;
-    font-weight: 600;
-    transition: .3s;
+    background: #F3E8FF !important;
+    margin: 10px 0 !important;
+    padding: 12px !important;
+    border-radius: 12px !important;
+    color: #4C1D95 !important;
+    font-weight: 600 !important;
+    transition: all 0.3s ease !important;
 }
 
 .feature-list li:hover {
-    background: #7C3AED;
-    color: white;
+    background: #7C3AED !important;
+    color: white !important;
 }
 
-/* Character & Word Counter */
+/* ==========================================================================
+   Text Utilities & Structural Elements
+   ========================================================================== */
 .counter {
-    color: #7C3AED;
-    font-size: 15px;
-    font-weight: 600;
-    padding: 5px 0;
+    color: #7C3AED !important;
+    font-size: 15px !important;
+    font-weight: 600 !important;
+    padding: 5px 0 !important;
 }
 
-/* Structural Elements */
 hr {
-    margin: 25px 0;
-    border: 1px solid #E9D5FF;
+    margin: 25px 0 !important;
+    border: 0 !important;
+    border-top: 1px solid #E9D5FF !important;
 }
 
 .footer {
-    text-align: center;
-    color: #666;
-    margin-top: 25px;
-    font-size: 14px;
+    text-align: center !important;
+    color: #6b7280 !important;
+    margin-top: 25px !important;
+    font-size: 14px !important;
 }
 
-/* ===========================
-   Status Messages (HTML Fixes)
-=========================== */
+/* ==========================================================================
+   Status Notifications 
+   ========================================================================== */
 .status-message {
-    padding: 12px;
-    margin-top: 10px;
-    border-radius: 10px;
-    font-size: 16px;
-    font-weight: 600;
-    display: block;
+    padding: 12px !important;
+    margin-top: 10px !important;
+    border-radius: 10px !important;
+    font-size: 16px !important;
+    font-weight: 600 !important;
+    display: block !important;
 }
 
 .success {
     background: #ECFDF5 !important;
+    background-color: #ECFDF5 !important;
     color: #6D28D9 !important;
-    border: 1px solid #10B981;
+    border: 1px solid #10B981 !important;
 }
 
 .error {
     background: #FEF2F2 !important;
+    background-color: #FEF2F2 !important;
     color: #4C1D95 !important;
-    border: 1px solid #EF4444;
+    border: 1px solid #EF4444 !important;
 }
 """
