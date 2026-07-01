@@ -88,11 +88,10 @@ SonicScript/
 ├── speech_app_styles.py
 ├── requirements.txt
 ├── README.md
-├── LICENSE
 ├── .gitignore
 │
 ├── assets/
-│   ├── banner.png
+│   ├── SonicScript_Banner.png
 │   ├── screenshot1.png
 │   ├── screenshot2.png
 |   ├── screenshot3.png
