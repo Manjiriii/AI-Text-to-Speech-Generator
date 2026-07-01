@@ -37,7 +37,7 @@ div[data-testid="trigger-button"] {
 }
 
 /* ==========================================================================
-   Cards & Layout Panels (Forces Gradio blocks to behave like your design)
+   Cards & Layout Panels 
    ========================================================================== */
 .card, .side-card, .languages, .gradio-block, .type-row {
     background: white !important;
@@ -68,7 +68,7 @@ button:hover, .gr-button:hover {
 }
 
 /* ==========================================================================
-   Custom Chips & Lists (Fixes the faded language button glitch)
+   Custom Chips & Lists 
    ========================================================================== */
 .chip-container {
     display: flex !important;
@@ -77,7 +77,7 @@ button:hover, .gr-button:hover {
     justify-content: center !important;
 }
 
-/* Forces the chips to display with full visibility and your custom branding colors */
+
 .chip {
     display: inline-flex !important;
     align-items: center !important;
