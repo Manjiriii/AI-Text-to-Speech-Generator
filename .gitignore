@@ -1,16 +1,18 @@
+# Python
 __pycache__/
+*.py[cod]
 *.pyc
-*.pyo
-*.pyd
 
-.venv/
+# Environment
+.env
 venv/
-env/
+.venv/
 
-.idea/
+# VS Code
 .vscode/
 
-*.mp3
-outputs/
-
+# macOS
 .DS_Store
+
+# Logs
+*.log
