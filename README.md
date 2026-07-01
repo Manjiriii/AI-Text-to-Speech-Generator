@@ -99,8 +99,7 @@ SonicScript/
 |   ├── screenshot4.png
 │   └── screenshot5.png
 │
-├── _pycache_/
-└── outputs/
+
 ```
 
 ---
